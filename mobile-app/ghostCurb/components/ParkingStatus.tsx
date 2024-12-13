@@ -4,6 +4,8 @@ import { ThemedText } from '@/components/ThemedText';
 import React, { useEffect, useState } from 'react';
 import { database } from '@/firebaseConfig';
 import { onValue, ref } from 'firebase/database';
+import { FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 export default function ParkingStatus() {
 
@@ -32,11 +34,13 @@ export default function ParkingStatus() {
   
       return (
       <View style={styles.container}>
-        <Text style={styles.title}>Parking Spot Status</Text>
+        <Text style={styles.title}>Parking Spot Status: {status ? "Available" : "Occupied"}</Text>
         <View style={styles.statusContainer}>
-          <Text style={styles.statusText}>
-            {status ? "Available 🚗" : "Occupied 🚫"}
-          </Text>
+            {status ? (
+            <FontAwesome name="car" size={150} color="black" />
+            ) : (
+            <MaterialCommunityIcons name="ghost" size={150} color="black" />
+            )}
         </View>
       </View>
     );
@@ -45,39 +49,26 @@ export default function ParkingStatus() {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
       padding: 20,
-      backgroundColor: "#f5f5f5",
+      paddingTop: 100,
+      backgroundColor: '#f5f5f5',
     },
     title: {
       fontSize: 24,
       fontWeight: "bold",
-      marginBottom: 20,
+      marginBottom: 10, // Reduce margin for tighter spacing
     },
     statusContainer: {
       padding: 20,
       backgroundColor: "#fff",
       borderRadius: 10,
       alignItems: "center",
-      marginBottom: 20,
+      marginBottom: 10, // Reduce margin between components
       elevation: 2, // Shadow for Android
       shadowColor: "#000", // Shadow for iOS
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 4,
     },
-    statusText: {
-      fontSize: 20,
-      fontWeight: "bold",
-      color: "#333",
-    },
-    logsTitle: {
-      fontSize: 18,
-      fontWeight: "bold",
-      marginVertical: 10,
-    },
-    logText: {
-      fontSize: 16,
-      marginBottom: 5,
-    },
   });
+  

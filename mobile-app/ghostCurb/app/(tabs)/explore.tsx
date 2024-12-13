@@ -7,38 +7,9 @@ import { onValue, ref } from 'firebase/database';
 
 export default function TabTwoScreen() {
 
-  const [status, setStatus] = useState<boolean>(false);
-
-  useEffect(() => {
-
-    const statusRef = ref(database, "status");
-
-    const unsubscribeStatus = onValue(statusRef, (snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
-        setStatus(data.current);
-      } else {
-        console.error("No status data available");
-      }
-    });
-
-    return () => {
-      unsubscribeStatus();
-    }
-
-
-  }, [])
-
 
     return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Parking Spot Status</Text>
-      <View style={styles.statusContainer}>
-        <Text style={styles.statusText}>
-          {status ? "Available 🚗" : "Occupied 🚫"}
-        </Text>
-      </View>
-    </View>
+      <ThemedText>Hello</ThemedText>
   );
 }
 

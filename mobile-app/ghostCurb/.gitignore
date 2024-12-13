@@ -37,3 +37,4 @@ yarn-error.*
 .vscode/
 build/
 app-example
+./env

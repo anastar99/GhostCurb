@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "329596016923",
+    "firebase_url": "https://ghostcurb-60836-default-rtdb.firebaseio.com",
+    "project_id": "ghostcurb-60836",
+    "storage_bucket": "ghostcurb-60836.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329596016923:android:e49f38573e6be20cf69bbe",
+        "android_client_info": {
+          "package_name": "dev.expo.notificationsapptutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnQTr9lPqsx_YuK1aKod97iUdBcPaZppM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

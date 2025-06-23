@@ -12,5 +12,5 @@ we use a:
 - firebase real time database to upload parking info
 - mobile app created using expo
 
-video of camera in action and bare dock
+video of camera in action and bare dock (yes I know its sketchy haha)
 https://drive.google.com/file/d/1534Y3veE3M-xhd8c8b63ct798QW-cwkK/view?usp=drivesdk
